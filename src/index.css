@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+body {
+    font-family: 'Work Sans', sans-serif;
+  }
+  @theme {
+    --color-primary: #002366;
+    --color-secondary:#F2F2F2;
+    --color-log:#0000001A;
+    --color-cardtext:#00000099;
+  }
+
+.shadow-lg{
+    --tw-shadow: 0 10px 15px 10px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+
+.rdrDateDisplay input {
+  color: #000 !important;
+}
+.rdrDateInput .rdrDateDisplayItem .rdrDateDisplayItemActive{
+   color: #000 !important;
+}
