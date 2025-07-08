@@ -9,6 +9,7 @@ import Signup from "@/Pages/Auth/Signup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./Pages/Not Found/index.jsx";
+import Dashboard from "./Pages/Dashboard/index.jsx";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/verify-otp" element={<VerifyOtp />} />
         </Route>
-    
+           <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/not-found" />} />
       </Routes>
