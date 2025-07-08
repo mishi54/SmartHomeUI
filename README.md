@@ -1,3 +1,6 @@
+Command to run code 
+npm i 
+npm run dev
 Frontend (React + Redux Toolkit Query)
  1. Auth UI
 Pages: /login, /register
