@@ -1,12 +1,56 @@
-# React + Vite
+Frontend (React + Redux Toolkit Query)
+ 1. Auth UI
+Pages: /login, /register
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Formik with Yup validation
 
-Currently, two official plugins are available:
+Stores user + token in Redux + localStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2. Dashboard Overview
+Device Summary Cards (from GET /telemetry/summary)
 
-## Expanding the ESLint configuration
+Show total and average usage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Device icons based on name
+
+Clickable to drill into device data
+
+ 3. Device Chart View
+Component: DeviceChart
+
+API: GET /telemetry/:deviceId
+
+Filters records to last 7 days
+
+Chart.js bar chart for energy over time
+
+ 4. AI Chat Assistant
+Component: EnergyChatbot
+
+Input box for questions
+
+Calls POST /api/chat
+
+Cleans and renders GPT's HTML reply with:
+
+dangerouslySetInnerHTML + DOMPurify
+
+Strips ```html markdown wrapping
+
+Smart responses: e.g.
+“How much energy did my AC use?” → only shows Living Room AC
+
+ Redux Store Setup
+Modules:
+
+authApi (register, login, logout)
+
+passwordApi (reset password, otp)
+
+telemetryApi (summary, detail)
+
+chatApi (chat assistant)
+
+State:
+
+userSlice for storing user info

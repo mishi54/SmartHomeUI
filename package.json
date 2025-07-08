@@ -16,6 +16,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "axios": "^1.8.4",
     "clsx": "^2.1.1",
+    "dompurify": "^3.2.6",
     "dotenv": "^16.5.0",
     "flowbite-react": "*",
     "formik": "^2.4.6",

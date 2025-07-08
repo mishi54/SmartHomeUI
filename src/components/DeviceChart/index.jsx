@@ -22,7 +22,7 @@ export default function DeviceChart({ deviceId }) {
       {
         label: "Energy Usage (Watts)",
         data: telemetry.map((d) => d.energyWatts),
-        backgroundColor: "#3B82F6",
+        backgroundColor: "#002366",
         borderRadius: 4,
       },
     ],
@@ -40,7 +40,7 @@ export default function DeviceChart({ deviceId }) {
 
   return (
     <div className="p-6 mt-4 bg-white rounded-xl shadow">
-      <h3 className="text-xl font-semibold mb-4 text-center">Last 7 Days Usage</h3>
+      <h3 className="text-xl font-semibold mb-4 text-center">Recent Energy Usage</h3>
       <Bar data={chartData} options={chartOptions} />
     </div>
   );
