@@ -15,7 +15,6 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 export default function DeviceChart({ deviceId }) {
   const { data: response, isLoading, error } = useGetDeviceDataQuery(deviceId);
   const telemetry = response?.data || []; 
-
   const chartData = {
     labels: telemetry.map((d) => moment(d.timestamp).format("MMM D, HH:mm")),
     datasets: [

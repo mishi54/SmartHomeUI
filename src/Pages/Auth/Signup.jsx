@@ -34,7 +34,7 @@ const Signup = () => {
       if (response?.status === 200) {
         dispatch(setUser(response?.data?.user));
         localStorage.setItem(auth_token_key, response.data?.token);
-        navigate("/agent");
+        navigate("/dashboard");
       }
     } finally {
       setLoading(false);
