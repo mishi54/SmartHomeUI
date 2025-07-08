@@ -1,9 +1,9 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { axiosBaseQuery } from "../../utils/axios";
-
+import { base_url } from "../../utils/ApiUrls";
 export const telemetryApi = createApi({
   reducerPath: "telemetryApi",
-  baseQuery: axiosBaseQuery({ baseUrl: import.meta.env.VITE_API_URL }),
+  baseQuery: axiosBaseQuery({ baseUrl: base_url }),
   endpoints: (builder) => ({
     getDeviceSummary: builder.query({
       query: () => ({

@@ -24,6 +24,7 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/verify-otp" element={<VerifyOtp />} />
         </Route>
+        
            <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/not-found" />} />

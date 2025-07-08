@@ -9,6 +9,7 @@ export const verify_otp="auth/verify-otp";
 export const reset_password="auth/reset-password";
 export const logout_url="auth/logout";
 export const auth_token_key = "access";
+
 // get authorization token
 export const getAuthToken = () => {
   // const token = JSON.parse(localStorage.getItem(auth_token_key)).token;
